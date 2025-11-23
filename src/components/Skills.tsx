@@ -1,53 +1,53 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const skills = [
-    "C/C++", "SQL/NoSQL", "JavaScript", "HTML/CSS", "TypeScript",
-    "AWS", "React", "Next.js", "Node.js", "Docker",
-    "Jenkins", "RestAPI", "Git", "Linux kernel"
+    { name: "JavaScript", category: "Frontend" },
+    { name: "TypeScript", category: "Frontend" },
+    { name: "React", category: "Frontend" },
+    { name: "Next.js", category: "Frontend" },
+    { name: "Tailwind CSS", category: "Frontend" },
+    { name: "Node.js", category: "Backend" },
+    { name: "Python", category: "Backend" },
+    { name: "AWS", category: "Cloud" },
+    { name: "Docker", category: "DevOps" },
+    { name: "Git", category: "Tools" },
+    { name: "SQL", category: "Database" },
+    { name: "HTML", category: "Frontend" },
+    { name: "CSS", category: "Frontend" },
+    { name: "Figma", category: "Design" },
+    { name: "Linux", category: "OS" },
+    { name: "MongoDB", category: "Database" },
+    { name: "GraphQL", category: "Backend" },
+    { name: "Redux", category: "Frontend" },
+    { name: "Prisma", category: "Backend" },
+    { name: "Vim", category: "Tools" },
 ];
 
 const Skills = () => {
-    const [activeSkill, setActiveSkill] = useState<string | null>(null);
-
-    useEffect(() => {
-        const handleKeyDown = (e: KeyboardEvent) => {
-            // Simple interaction: Randomly highlight a skill on any key press
-            const randomSkill = skills[Math.floor(Math.random() * skills.length)];
-            setActiveSkill(randomSkill);
-
-            // Reset after a short delay
-            setTimeout(() => setActiveSkill(null), 500);
-        };
-
-        window.addEventListener("keydown", handleKeyDown);
-        return () => window.removeEventListener("keydown", handleKeyDown);
-    }, []);
-
     return (
-        <section id="skills" className="py-20 bg-black text-white">
-            <div className="container mx-auto px-6">
+        <section id="skills" className="py-24 bg-zinc-950 text-white">
+            <div className="container mx-auto px-6 max-w-4xl">
                 <motion.h2
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     className="text-4xl font-bold mb-12 text-center"
                 >
-                    SKILLS <span className="text-sm font-normal text-gray-500 block mt-2">(Press any key to interact)</span>
+                    Technical Skills
                 </motion.h2>
 
-                <div className="flex flex-wrap justify-center gap-4">
-                    {skills.map((skill) => (
+                <div className="flex flex-wrap justify-center gap-3">
+                    {skills.map((skill, index) => (
                         <motion.div
-                            key={skill}
-                            className={`px-6 py-3 rounded-full border transition-all duration-300 ${activeSkill === skill
-                                ? "bg-cyan-400 text-black border-cyan-400 scale-110"
-                                : "border-gray-800 text-gray-400 hover:border-gray-600"
-                                }`}
+                            key={skill.name}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: index * 0.05 }}
                             whileHover={{ scale: 1.05 }}
+                            className="px-6 py-3 bg-zinc-900 rounded-full border border-zinc-800 text-gray-300 font-medium hover:text-white hover:border-zinc-600 transition-colors cursor-default"
                         >
-                            {skill}
+                            {skill.name}
                         </motion.div>
                     ))}
                 </div>

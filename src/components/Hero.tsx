@@ -42,6 +42,27 @@ const Hero = () => {
                         View My Work
                     </a>
                 </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                    className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left"
+                >
+                    <div className="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 backdrop-blur-sm">
+                        <h3 className="text-cyan-400 font-bold mb-2 text-lg">The Magic ✨</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            "Software engineering is the closest thing we have to magic. We speak words into a computer, and they build worlds, solve impossible problems, and impact millions of lives. It's the pure joy of creation."
+                        </p>
+                    </div>
+
+                    <div className="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 backdrop-blur-sm">
+                        <h3 className="text-purple-400 font-bold mb-2 text-lg">The Madness 🤯</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            "But let's be real... it's also questioning your sanity when a missing semicolon breaks production, or debugging a race condition at 3 AM that only happens on Tuesdays. It's a love-hate relationship."
+                        </p>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );
