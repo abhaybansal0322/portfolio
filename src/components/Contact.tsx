@@ -23,11 +23,10 @@ const Contact = () => {
         setErrorMessage(null);
 
         try {
-            // REPLACE THESE WITH YOUR ACTUAL EMAILJS KEYS
-            // Sign up at https://www.emailjs.com/
-            const SERVICE_ID = "YOUR_SERVICE_ID";
-            const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-            const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+            // Keys are now stored in .env.local
+            const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+            const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+            const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
             await emailjs.send(
                 SERVICE_ID,
@@ -47,10 +46,11 @@ const Contact = () => {
 
             // Reset success message after 3 seconds
             setTimeout(() => setIsSuccess(false), 3000);
-        } catch (error) {
+        } catch (error: any) {
             console.error("EmailJS Error:", error);
-            setIsSubmitting(false);
-            setErrorMessage("Failed to send message. Please check your EmailJS keys.");
+            // Show the actual error message from EmailJS if available
+            const errorMsg = error?.text || error?.message || "Failed to send message. Please check your EmailJS keys.";
+            setErrorMessage(errorMsg);
         }
     };
 
