@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <section
             id="home"
-            className="relative w-full overflow-hidden bg-black text-white pt-36 pb-20 md:h-screen md:min-h-[800px] md:flex md:items-center md:justify-center md:pt-0 md:pb-0"
+            className="relative w-full overflow-hidden bg-black text-white pt-40 pb-20 sm:pt-44 md:h-screen md:min-h-[800px] md:flex md:items-center md:justify-center md:pt-0 md:pb-0"
         >
             {/* Background Elements */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-black to-black" />
