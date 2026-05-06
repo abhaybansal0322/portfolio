@@ -1,54 +1,72 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Cloud, Code2, Database, Server } from "lucide-react";
 
-const skills = [
-    { name: "JavaScript", category: "Frontend" },
-    { name: "TypeScript", category: "Frontend" },
-    { name: "React", category: "Frontend" },
-    { name: "Next.js", category: "Frontend" },
-    { name: "Tailwind CSS", category: "Frontend" },
-    { name: "Node.js", category: "Backend" },
-    { name: "Python", category: "Backend" },
-    { name: "AWS", category: "Cloud" },
-    { name: "Docker", category: "DevOps" },
-    { name: "Git", category: "Tools" },
-    { name: "SQL", category: "Database" },
-    { name: "HTML", category: "Frontend" },
-    { name: "CSS", category: "Frontend" },
-    { name: "Figma", category: "Design" },
-    { name: "Linux", category: "OS" },
-    { name: "MongoDB", category: "Database" },
-    { name: "GraphQL", category: "Backend" },
-    { name: "Redux", category: "Frontend" },
-    { name: "Prisma", category: "Backend" },
-    { name: "Vim", category: "Tools" },
+const skillGroups = [
+    {
+        title: "Languages",
+        icon: Code2,
+        items: ["C++", "TypeScript", "JavaScript", "SQL"],
+    },
+    {
+        title: "Backend & Systems",
+        icon: Server,
+        items: ["Node.js", "REST APIs", "NextAuth", "Webhooks", "Workato", "Redis"],
+    },
+    {
+        title: "Data",
+        icon: Database,
+        items: ["PostgreSQL", "Neon", "MongoDB", "SQL design"],
+    },
+    {
+        title: "Cloud & DevOps",
+        icon: Cloud,
+        items: ["AWS EC2", "AWS S3", "Docker", "Nginx", "Git"],
+    },
 ];
+
+const foundations = ["DSA", "OS", "DBMS", "Computer Networks", "OOP", "Next.js", "Tailwind CSS"];
 
 const Skills = () => {
     return (
-        <section id="skills" className="py-24 bg-zinc-950 text-white">
-            <div className="container mx-auto px-6 max-w-4xl">
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    className="text-4xl font-bold mb-12 text-center"
-                >
-                    Technical Skills
-                </motion.h2>
+        <section id="skills" className="border-y border-white/10 bg-[#0b0e14] px-6 py-24 text-white">
+            <div className="mx-auto max-w-7xl">
+                <div className="mb-12 max-w-3xl">
+                    <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#58d6c9]">Technical stack</p>
+                    <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+                        Skills grouped by the work recruiters actually evaluate.
+                    </h2>
+                </div>
 
-                <div className="flex flex-wrap justify-center gap-3">
-                    {skills.map((skill, index) => (
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                    {skillGroups.map(({ title, icon: Icon, items }, index) => (
                         <motion.div
-                            key={skill.name}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: index * 0.05 }}
-                            whileHover={{ scale: 1.05 }}
-                            className="px-6 py-3 bg-zinc-900 rounded-full border border-zinc-800 text-gray-300 font-medium hover:text-white hover:border-zinc-600 transition-colors cursor-default"
+                            key={title}
+                            initial={{ opacity: 0, y: 18 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-80px" }}
+                            transition={{ duration: 0.45, delay: index * 0.05 }}
+                            className="border border-white/10 bg-white/[0.03] p-5"
                         >
-                            {skill.name}
+                            <Icon className="h-5 w-5 text-[#58d6c9]" />
+                            <h3 className="mt-5 text-lg font-semibold">{title}</h3>
+                            <div className="mt-5 flex flex-wrap gap-2">
+                                {items.map((item) => (
+                                    <span key={item} className="border border-white/10 px-3 py-1.5 text-xs text-slate-300">
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
                         </motion.div>
+                    ))}
+                </div>
+
+                <div className="mt-8 flex flex-wrap gap-2 border-t border-white/10 pt-8">
+                    {foundations.map((item) => (
+                        <span key={item} className="bg-white px-3 py-1.5 text-xs font-semibold text-[#07090d]">
+                            {item}
+                        </span>
                     ))}
                 </div>
             </div>

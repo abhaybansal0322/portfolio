@@ -1,62 +1,66 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Workflow } from "lucide-react";
 
-const experiences = [
-    {
-        role: "ELC Summer Intern",
-        company: "Thapar University",
-        location: "Patiala, Punjab",
-        duration: "Jun 2025 – Jul 2025",
-        description: [
-            "Developed an AI-based system for Circuit Component Identification and Layout Generation, reduced manual design time by 40% and improved accuracy by 25%.",
-            "Engineered a YOLO model for PCB component detection with 95% accuracy on complex images.",
-            "Applied OCR to extract component labels, automating data extraction for 90% of layouts."
-        ]
-    }
+const highlights = [
+    "Built and maintained 50+ CRM automation workflows using Workato.",
+    "Integrated Twilio, email, webhooks, and CRM APIs for backend business processes.",
+    "Implemented event-driven flows for lead communication, notifications, and data synchronization.",
+    "Debugged workflow failures, optimized API payload handling, and improved error tracking.",
 ];
 
 const Experience = () => {
     return (
-        <section id="experience" className="py-20 bg-zinc-950 text-white">
-            <div className="container mx-auto px-6 max-w-4xl">
-                <motion.h2
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    className="text-4xl font-bold mb-16 text-center"
-                >
-                    Experience
-                </motion.h2>
-
-                <div className="space-y-12">
-                    {experiences.map((exp, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            className="border-l-2 border-cyan-400 pl-8 relative"
-                        >
-                            <span className="absolute -left-[9px] top-0 w-4 h-4 bg-cyan-400 rounded-full" />
-
-                            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                                <h3 className="text-2xl font-bold text-white">{exp.role}</h3>
-                                <span className="text-gray-400 text-sm font-mono">{exp.duration}</span>
-                            </div>
-
-                            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                                <h4 className="text-xl text-cyan-400">{exp.company}</h4>
-                                <span className="text-gray-500 text-sm">{exp.location}</span>
-                            </div>
-
-                            <ul className="list-disc list-outside ml-4 space-y-2 text-gray-300">
-                                {exp.description.map((item, i) => (
-                                    <li key={i}>{item}</li>
-                                ))}
-                            </ul>
-                        </motion.div>
-                    ))}
+        <section id="experience" className="bg-[#07090d] px-6 py-24 text-white">
+            <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.8fr_1.2fr]">
+                <div>
+                    <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#58d6c9]">Current experience</p>
+                    <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+                        Automation and API work in production CRM workflows.
+                    </h2>
+                    <p className="mt-6 max-w-xl text-sm leading-7 text-slate-400">
+                        Current engineering internship work is centered on reliable backend automation, integration behavior, operational debugging, and reducing manual CRM work.
+                    </p>
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.55 }}
+                    className="border border-white/10 bg-white/[0.03] p-6 md:p-8"
+                >
+                    <div className="flex flex-col gap-5 border-b border-white/10 pb-8 md:flex-row md:items-start md:justify-between">
+                        <div>
+                            <div className="flex items-center gap-3">
+                                <Workflow className="h-6 w-6 text-[#58d6c9]" />
+                                <h3 className="text-2xl font-semibold tracking-tight">Engineering Intern</h3>
+                            </div>
+                            <p className="mt-3 text-lg text-slate-300">Adaptware Solutions Pvt Ltd. (Relcu)</p>
+                        </div>
+                        <div className="font-mono text-sm text-slate-400 md:text-right">
+                            <p>Mar 2026 - Present</p>
+                            <p>Remote / India</p>
+                        </div>
+                    </div>
+
+                    <div className="mt-8 grid gap-4">
+                        {highlights.map((item, index) => (
+                            <motion.div
+                                key={item}
+                                initial={{ opacity: 0, x: -12 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, margin: "-80px" }}
+                                transition={{ duration: 0.45, delay: index * 0.06 }}
+                                className="grid grid-cols-[48px_1fr] gap-4 border-t border-white/10 pt-4 first:border-t-0 first:pt-0"
+                            >
+                                <span className="font-mono text-sm text-[#58d6c9]">0{index + 1}</span>
+                                <p className="text-sm leading-7 text-slate-300">{item}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

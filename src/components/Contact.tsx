@@ -1,166 +1,62 @@
 "use client";
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { motion, AnimatePresence } from "framer-motion";
-import { Check, Loader2, Send } from "lucide-react";
-import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import { Download, Github, Linkedin, Mail, Phone, MapPin, Code2 } from "lucide-react";
 
-type FormData = {
-    name: string;
-    email: string;
-    message: string;
-};
+const contactLinks = [
+    { label: "Email", value: "abhaybansal19000@gmail.com", href: "mailto:abhaybansal19000@gmail.com", icon: Mail },
+    { label: "Phone", value: "+91 8968916714", href: "tel:+918968916714", icon: Phone },
+    { label: "LinkedIn", value: "abhay-bansal", href: "https://www.linkedin.com/in/abhay-bansal-44474a263/", icon: Linkedin },
+    { label: "GitHub", value: "abhaybansal0322", href: "https://github.com/abhaybansal0322", icon: Github },
+    { label: "LeetCode", value: "abhaybansal_", href: "https://leetcode.com/u/abhaybansal_/", icon: Code2 },
+];
 
 const Contact = () => {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
-    const [errorMessage, setErrorMessage] = useState<string | null>(null);
-
-    const onSubmit = async (data: FormData) => {
-        setIsSubmitting(true);
-        setErrorMessage(null);
-
-        try {
-            // Keys are now stored in .env.local
-            const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
-            const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
-            const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
-
-            await emailjs.send(
-                SERVICE_ID,
-                TEMPLATE_ID,
-                {
-                    from_name: data.name,
-                    from_email: data.email,
-                    message: data.message,
-                },
-                PUBLIC_KEY
-            );
-
-            console.log("Email sent successfully!");
-            setIsSubmitting(false);
-            setIsSuccess(true);
-            reset();
-
-            // Reset success message after 3 seconds
-            setTimeout(() => setIsSuccess(false), 3000);
-        } catch (error: any) {
-            console.error("EmailJS Error:", error);
-            // Show the actual error message from EmailJS if available
-            const errorMsg = error?.text || error?.message || "Failed to send message. Please check your EmailJS keys.";
-            setErrorMessage(errorMsg);
-        }
-    };
-
     return (
-        <section id="contact" className="py-20 bg-black text-white">
-            <div className="container mx-auto px-6 max-w-4xl">
-                <motion.h2
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    className="text-4xl font-bold mb-16 text-center"
-                >
-                    Let's Work Together
-                </motion.h2>
-
-                <div className="grid md:grid-cols-2 gap-12">
-                    <div>
-                        <h3 className="text-2xl font-bold mb-6">Get in touch</h3>
-                        <p className="text-gray-400 mb-8 leading-relaxed">
-                            I'm currently available for freelance work or full-time opportunities.
-                            If you have a project that needs some creative touch, or just want to say hi,
-                            feel free to drop me a message.
-                        </p>
-                        <div className="text-gray-400 space-y-4">
-                            <p className="flex items-center gap-3">
-                                <span className="w-8 h-8 bg-zinc-900 rounded-full flex items-center justify-center text-cyan-400">✉️</span>
-                                abhaybansal19000@gmail.com
-                            </p>
-                            <p className="flex items-center gap-3">
-                                <span className="w-8 h-8 bg-zinc-900 rounded-full flex items-center justify-center text-cyan-400">📱</span>
-                                +91 8968916714
-                            </p>
-                            <p className="flex items-center gap-3">
-                                <span className="w-8 h-8 bg-zinc-900 rounded-full flex items-center justify-center text-cyan-400">📍</span>
-                                Patiala, Punjab
-                            </p>
-                        </div>
-                    </div>
-
-                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 bg-zinc-900/30 p-8 rounded-2xl border border-zinc-800">
-                        <div>
-                            <label className="block text-sm font-medium text-gray-400 mb-2">Name</label>
-                            <input
-                                {...register("name", { required: true })}
-                                disabled={isSubmitting}
-                                className="w-full bg-zinc-900 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors disabled:opacity-50"
-                                placeholder="John Doe"
-                            />
-                            {errors.name && <span className="text-red-500 text-xs mt-1">Name is required</span>}
-                        </div>
-
-                        <div>
-                            <label className="block text-sm font-medium text-gray-400 mb-2">Email</label>
-                            <input
-                                {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
-                                disabled={isSubmitting}
-                                className="w-full bg-zinc-900 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors disabled:opacity-50"
-                                placeholder="john@example.com"
-                            />
-                            {errors.email && <span className="text-red-500 text-xs mt-1">Valid email is required</span>}
-                        </div>
-
-                        <div>
-                            <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
-                            <textarea
-                                {...register("message", { required: true })}
-                                disabled={isSubmitting}
-                                rows={4}
-                                className="w-full bg-zinc-900 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors disabled:opacity-50"
-                                placeholder="Tell me about your project..."
-                            />
-                            {errors.message && <span className="text-red-500 text-xs mt-1">Message is required</span>}
-                        </div>
-
-                        {errorMessage && (
-                            <div className="text-red-500 text-sm text-center bg-red-500/10 p-2 rounded">
-                                {errorMessage}
-                            </div>
-                        )}
-
-                        <button
-                            type="submit"
-                            disabled={isSubmitting || isSuccess}
-                            className={`w-full font-bold py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2
-                                ${isSuccess
-                                    ? "bg-green-500 text-white"
-                                    : "bg-white text-black hover:bg-cyan-400"
-                                }
-                                ${isSubmitting ? "opacity-70 cursor-wait" : ""}
-                            `}
-                        >
-                            {isSubmitting ? (
-                                <>
-                                    <Loader2 className="animate-spin" size={20} />
-                                    Sending...
-                                </>
-                            ) : isSuccess ? (
-                                <>
-                                    <Check size={20} />
-                                    Message Sent!
-                                </>
-                            ) : (
-                                <>
-                                    Send Message
-                                    <Send size={18} />
-                                </>
-                            )}
-                        </button>
-                    </form>
+        <section id="contact" className="bg-[#0b0e14] px-6 py-24 text-white">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.55 }}
+                className="mx-auto grid max-w-7xl gap-12 border border-white/10 bg-white/[0.03] p-6 md:grid-cols-[0.85fr_1.15fr] md:p-10"
+            >
+                <div>
+                    <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#58d6c9]">Recruiter contact</p>
+                    <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+                        Open to software developer roles and internship-to-full-time conversations.
+                    </h2>
+                    <p className="mt-6 flex items-center gap-3 text-sm text-slate-400">
+                        <MapPin className="h-4 w-4 text-[#58d6c9]" />
+                        Patiala, Punjab, India
+                    </p>
+                    <a
+                        href="/Abhay-Bansal-Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-8 inline-flex items-center justify-center gap-2 bg-white px-5 py-3 text-sm font-semibold text-[#07090d] transition hover:bg-[#58d6c9]"
+                    >
+                        <Download size={18} />
+                        Download Resume
+                    </a>
                 </div>
-            </div>
+
+                <div className="grid gap-3 md:grid-cols-2">
+                    {contactLinks.map(({ label, value, href, icon: Icon }) => (
+                        <a
+                            key={label}
+                            href={href}
+                            target={href.startsWith("http") ? "_blank" : undefined}
+                            rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                            className="group border border-white/10 p-5 transition hover:border-[#58d6c9]/70 hover:bg-[#58d6c9]/5"
+                        >
+                            <Icon className="h-5 w-5 text-[#58d6c9]" />
+                            <p className="mt-5 font-mono text-xs uppercase tracking-[0.24em] text-slate-500">{label}</p>
+                            <p className="mt-2 break-words text-sm font-medium text-slate-200 group-hover:text-white">{value}</p>
+                        </a>
+                    ))}
+                </div>
+            </motion.div>
         </section>
     );
 };
