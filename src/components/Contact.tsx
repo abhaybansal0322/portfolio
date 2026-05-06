@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download, Github, Linkedin, Mail, Phone, MapPin, Code2 } from "lucide-react";
+import { Download, Github, Linkedin, Mail, Phone, MapPin, Code2, Trophy } from "lucide-react";
 
 const contactLinks = [
     { label: "Email", value: "abhaybansal19000@gmail.com", href: "mailto:abhaybansal19000@gmail.com", icon: Mail },
@@ -9,6 +9,7 @@ const contactLinks = [
     { label: "LinkedIn", value: "abhay-bansal", href: "https://www.linkedin.com/in/abhay-bansal-44474a263/", icon: Linkedin },
     { label: "GitHub", value: "abhaybansal0322", href: "https://github.com/abhaybansal0322", icon: Github },
     { label: "LeetCode", value: "abhaybansal_", href: "https://leetcode.com/u/abhaybansal_/", icon: Code2 },
+    { label: "CodeChef", value: "bansal03", href: "https://www.codechef.com/users/bansal03", icon: Trophy },
 ];
 
 const Contact = () => {

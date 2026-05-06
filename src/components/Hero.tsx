@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Code2, Download, Github, Linkedin, Mail } from "lucide-react";
 
 const profileLinks = [
     { label: "GitHub", href: "https://github.com/abhaybansal0322", icon: Github },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/abhay-bansal-44474a263/", icon: Linkedin },
+    { label: "CodeChef", href: "https://www.codechef.com/users/bansal03", icon: Code2 },
     { label: "Email", href: "mailto:abhaybansal19000@gmail.com", icon: Mail },
 ];
 
