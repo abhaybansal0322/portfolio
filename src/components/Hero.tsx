@@ -115,7 +115,7 @@ const Hero = () => {
                                 ["automation", "50+ Workato CRM workflows with Twilio, email, webhooks, and CRM APIs"],
                                 ["systems", "Expense platform with penny-accurate settlements and service-based backend"],
                                 ["scale", "ELC booking workflows supporting 100+ daily room requests"],
-                                ["problem solving", "LeetCode Knight 2145, CodeChef 4-Star, 500+ DSA problems"],
+                                ["problem solving", "LeetCode Guardian 2100+, CodeChef 4-Star, 500+ DSA problems"],
                             ].map(([title, detail], index) => (
                                 <div key={title} className="grid grid-cols-[112px_1fr] gap-4 border-t border-white/10 pt-5 first:border-t-0 first:pt-0">
                                     <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#58d6c9]">0{index + 1} {title}</p>
