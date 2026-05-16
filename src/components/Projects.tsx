@@ -5,6 +5,22 @@ import { ArrowUpRight, Github } from "lucide-react";
 
 const projects = [
     {
+        title: "DevSquad MCP",
+        year: "2026",
+        summary: "TypeScript MCP server that turns vague coding prompts into safe, role-based execution workflows for AI coding agents.",
+        stack: ["TypeScript", "MCP SDK", "Node.js", "Zod", "Vitest", "JSON storage"],
+        proof: [
+            "Built deterministic prompt classification for implementation, discovery-first, and investigation-only workflows.",
+            "Modeled senior-dev roles across Architect, Backend, Frontend, Database, Testing, Reviewer, Investigation, and DevOps tasks.",
+            "Implemented local JSON workflow state with recovery from invalid data and atomic writes through temporary files.",
+            "Added rule-based review gates, final merge strategy output, verification checklists, and risk summaries without API keys or shell execution.",
+        ],
+        links: {
+            code: "https://github.com/abhaybansal0322/Devsquad",
+        },
+        diagram: ["Prompt classifier", "Workflow router", "Role tasks", "Review gates", "Final checklist"],
+    },
+    {
         title: "Smart Expense Splitter",
         year: "2026",
         summary: "Full-stack expense management platform for precise group spending, settlement planning, authentication, and financial workflows.",
@@ -47,11 +63,11 @@ const Projects = () => {
                     <div className="max-w-3xl">
                         <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#58d6c9]">Featured projects</p>
                         <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-                            Two systems with backend depth recruiters can inspect.
+                            Three systems with backend depth recruiters can inspect.
                         </h2>
                     </div>
                     <p className="max-w-sm text-sm leading-7 text-slate-400">
-                        Focused on the same projects listed in the resume so the portfolio reinforces, rather than dilutes, the hiring story.
+                        Focused on inspectable systems with production-style workflows, backend architecture, and clear implementation proof.
                     </p>
                 </div>
 
