@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Download, Github, Linkedin, Mail, Phone, MapPin, Code2, Trophy } from "lucide-react";
 
 const contactLinks = [
-    { label: "Email", value: "abhaybansal19000@gmail.com", href: "mailto:abhaybansal19000@gmail.com", icon: Mail },
+    { label: "Email", value: "abhaybansalwork@gmail.com", href: "mailto:abhaybansalwork@gmail.com", icon: Mail },
     { label: "Phone", value: "+91 8968916714", href: "tel:+918968916714", icon: Phone },
     { label: "LinkedIn", value: "abhay-bansal", href: "https://www.linkedin.com/in/abhay-bansal-44474a263/", icon: Linkedin },
     { label: "GitHub", value: "abhaybansal0322", href: "https://github.com/abhaybansal0322", icon: Github },
