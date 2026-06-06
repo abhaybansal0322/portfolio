@@ -7,12 +7,12 @@ const skillGroups = [
     {
         title: "Languages",
         icon: Code2,
-        items: ["C++", "TypeScript", "JavaScript", "SQL"],
+        items: ["C++", "Go", "TypeScript", "JavaScript", "SQL"],
     },
     {
         title: "Backend & Systems",
         icon: Server,
-        items: ["Node.js", "REST APIs", "NextAuth", "Webhooks", "Workato", "Redis"],
+        items: ["Go HTTP Services", "Node.js", "REST APIs", "API Integrations", "Webhooks", "Workato", "Redis"],
     },
     {
         title: "Data",
@@ -22,11 +22,11 @@ const skillGroups = [
     {
         title: "Cloud & DevOps",
         icon: Cloud,
-        items: ["AWS EC2", "AWS S3", "Docker", "Nginx", "Git"],
+        items: ["Docker", "GitHub Actions", "AWS EC2", "AWS S3", "Nginx", "Git", "CI/CD", "Unit Testing"],
     },
 ];
 
-const foundations = ["DSA", "OS", "DBMS", "Computer Networks", "OOP", "Next.js", "Tailwind CSS"];
+const foundations = ["DSA", "OS", "DBMS", "Computer Networks", "OOP", "Next.js", "Tailwind CSS", "OpenAPI"];
 
 const Skills = () => {
     return (

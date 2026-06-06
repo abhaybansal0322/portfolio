@@ -5,6 +5,22 @@ import { ArrowUpRight, Github } from "lucide-react";
 
 const projects = [
     {
+        title: "AE Brand User Invitation System",
+        year: "2026",
+        summary: "Production-ready Go backend service for brand user invitation, self-service onboarding, access control, and audit queries.",
+        stack: ["Go", "REST APIs", "Docker", "OpenAPI", "GitHub Actions", "Structured logging"],
+        proof: [
+            "Built brand user creation, persona updates, removals, listing, and audit-query workflows from a product requirements document.",
+            "Implemented super-admin authorization, request validation, duplicate-user handling, multi-persona support, and account-level access control.",
+            "Designed pluggable Admin API adapters with clean service-layer orchestration and local file-backed persistence.",
+            "Added audit logging, OpenAPI documentation, Docker setup, GitHub Actions CI, graceful shutdown, and unit tests.",
+        ],
+        links: {
+            code: "https://github.com/abhaybansal0322/AE-Brand-User-Invitation",
+        },
+        diagram: ["HTTP API", "Authorization", "Service layer", "Admin adapters", "Audit log"],
+    },
+    {
         title: "DevSquad MCP",
         year: "2026",
         summary: "TypeScript MCP server that turns vague coding prompts into safe, role-based execution workflows for AI coding agents.",
@@ -63,7 +79,7 @@ const Projects = () => {
                     <div className="max-w-3xl">
                         <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#58d6c9]">Featured projects</p>
                         <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-                            Three systems with backend depth recruiters can inspect.
+                            Four systems with backend depth recruiters can inspect.
                         </h2>
                     </div>
                     <p className="max-w-sm text-sm leading-7 text-slate-400">

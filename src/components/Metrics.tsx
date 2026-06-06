@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const metrics = [
     { value: "50+", label: "CRM automation workflows built and maintained" },
     { value: "1000+", label: "generated expense cases used to validate settlement math" },
-    { value: "2100+", label: "LeetCode rating, Guardian tier and top 1.3%" },
-    { value: "500+", label: "DSA problems solved across coding platforms" },
+    { value: "2145", label: "LeetCode rating, Guardian tier and top 1.3%" },
+    { value: "800+", label: "DSA problems solved across coding platforms" },
 ];
 
 const Metrics = () => {

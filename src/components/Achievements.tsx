@@ -7,7 +7,7 @@ const achievements = [
     "INR 3 Lakh Merit Scholarship at Thapar University",
     "Global Rank 25 in CodeChef Starters 216",
     "Global Rank 181 in LeetCode Biweekly Contest 173",
-    "CodeChef 4-Star, peak rating 1919; Codeforces rating 1511",
+    "LeetCode Guardian 2145; CodeChef 4-Star, peak rating 1919",
 ];
 
 const Achievements = () => {

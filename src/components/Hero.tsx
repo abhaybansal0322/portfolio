@@ -7,10 +7,10 @@ const profileLinks = [
     { label: "GitHub", href: "https://github.com/abhaybansal0322", icon: Github },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/abhay-bansal-44474a263/", icon: Linkedin },
     { label: "CodeChef", href: "https://www.codechef.com/users/bansal03", icon: Code2 },
-    { label: "Email", href: "mailto:abhaybansal19000@gmail.com", icon: Mail },
+    { label: "Email", href: "mailto:abhaybansalwork@gmail.com", icon: Mail },
 ];
 
-const stack = ["Next.js", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "AWS EC2", "Docker", "Workato"];
+const stack = ["Go", "TypeScript", "Node.js", "PostgreSQL", "MongoDB", "Redis", "Docker", "GitHub Actions", "Workato"];
 
 const Hero = () => {
     return (
@@ -38,7 +38,7 @@ const Hero = () => {
                         transition={{ duration: 0.65, delay: 0.08 }}
                         className="mt-6 max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl md:text-7xl"
                     >
-                        Abhay Bansal builds backend-driven software that ships with measurable reliability.
+                        Abhay Bansal builds backend systems, automation, and AI-native developer tooling.
                     </motion.h1>
 
                     <motion.p
@@ -47,7 +47,7 @@ const Hero = () => {
                         transition={{ duration: 0.65, delay: 0.16 }}
                         className="mt-7 max-w-2xl text-lg leading-8 text-slate-300"
                     >
-                        Software developer focused on full-stack systems, API integrations, workflow automation, and precise backend logic using Next.js, TypeScript, PostgreSQL, MongoDB, Redis, AWS, and Docker.
+                        Software Development Engineer focused on Go services, TypeScript systems, API integrations, workflow automation, structured logging, and scalable backend design.
                     </motion.p>
 
                     <motion.div
@@ -113,9 +113,10 @@ const Hero = () => {
                         <div className="space-y-5">
                             {[
                                 ["automation", "50+ Workato CRM workflows with Twilio, email, webhooks, and CRM APIs"],
+                                ["go backend", "Brand invitation service with authorization, audit logs, OpenAPI docs, Docker, CI, and unit tests"],
                                 ["systems", "Expense platform with penny-accurate settlements and service-based backend"],
                                 ["scale", "ELC booking workflows supporting 100+ daily room requests"],
-                                ["problem solving", "LeetCode Guardian 2100+, CodeChef 4-Star, 500+ DSA problems"],
+                                ["problem solving", "LeetCode Guardian 2145, CodeChef 4-Star, 800+ DSA problems"],
                             ].map(([title, detail], index) => (
                                 <div key={title} className="grid grid-cols-[112px_1fr] gap-4 border-t border-white/10 pt-5 first:border-t-0 first:pt-0">
                                     <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#58d6c9]">0{index + 1} {title}</p>
