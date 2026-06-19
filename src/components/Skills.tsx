@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cloud, Code2, Database, Server } from "lucide-react";
+import { Bot, Cloud, Code2, Server } from "lucide-react";
 
 const skillGroups = [
     {
@@ -10,19 +10,19 @@ const skillGroups = [
         items: ["C++", "Go", "TypeScript", "JavaScript", "SQL"],
     },
     {
-        title: "Backend & Systems",
+        title: "Backend & Frameworks",
         icon: Server,
-        items: ["Go HTTP Services", "Node.js", "REST APIs", "API Integrations", "Webhooks", "Workato", "Redis"],
+        items: ["Node.js", "Fastify", "Go HTTP Services", "REST APIs", "React", "Next.js"],
     },
     {
-        title: "Data",
-        icon: Database,
-        items: ["PostgreSQL", "Neon", "MongoDB", "SQL design"],
+        title: "AI & Realtime",
+        icon: Bot,
+        items: ["LangChain", "LangGraph", "Socket.IO", "AI Agents", "JWT refresh", "Concurrency throttling"],
     },
     {
-        title: "Cloud & DevOps",
+        title: "Data & Platforms",
         icon: Cloud,
-        items: ["Docker", "GitHub Actions", "AWS EC2", "AWS S3", "Nginx", "Git", "CI/CD", "Unit Testing"],
+        items: ["PostgreSQL", "MongoDB", "Redis", "Docker", "GitHub Actions", "AWS EC2", "AWS S3", "Git"],
     },
 ];
 

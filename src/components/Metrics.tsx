@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const metrics = [
-    { value: "50+", label: "CRM automation workflows built and maintained" },
+    { value: "20+", label: "AI workflows enabled across recruiting and workflow modules" },
+    { value: "50", label: "parallel AI executions supported per backend instance" },
     { value: "1000+", label: "generated expense cases used to validate settlement math" },
-    { value: "2145", label: "LeetCode rating, Guardian tier and top 1.3%" },
     { value: "800+", label: "DSA problems solved across coding platforms" },
 ];
 

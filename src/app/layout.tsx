@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Abhay Bansal | Software Developer",
   description:
-    "Software developer focused on Go backend services, TypeScript systems, API integrations, automation, Docker, GitHub Actions, and strong problem solving.",
+    "Software developer focused on TypeScript/Fastify microservices, Go backend services, AI workflow integrations, Socket.IO, PostgreSQL, Redis, Docker, and strong problem solving.",
 };
 
 export default function RootLayout({

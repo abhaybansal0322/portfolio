@@ -8,7 +8,7 @@ const contactLinks = [
     { label: "Phone", value: "+91 8968916714", href: "tel:+918968916714", icon: Phone },
     { label: "LinkedIn", value: "abhay-bansal", href: "https://www.linkedin.com/in/abhay-bansal-44474a263/", icon: Linkedin },
     { label: "GitHub", value: "abhaybansal0322", href: "https://github.com/abhaybansal0322", icon: Github },
-    { label: "LeetCode", value: "abhaybansal_", href: "https://leetcode.com/u/abhaybansal_/", icon: Code2 },
+    { label: "LeetCode", value: "abhaybansal", href: "https://leetcode.com/u/abhaybansal/", icon: Code2 },
     { label: "CodeChef", value: "bansal03", href: "https://www.codechef.com/users/bansal03", icon: Trophy },
 ];
 

@@ -1,19 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
+import { Github } from "lucide-react";
 
 const projects = [
     {
         title: "AE Brand User Invitation System",
         year: "2026",
-        summary: "Production-ready Go backend service for brand user invitation, self-service onboarding, access control, and audit queries.",
-        stack: ["Go", "REST APIs", "Docker", "OpenAPI", "GitHub Actions", "Structured logging"],
+        summary: "Production-ready Go backend service for brand user invitation and self-service onboarding, supporting 6+ user-management operations.",
+        stack: ["Go", "REST APIs", "Docker", "OpenAPI", "GitHub Actions"],
         proof: [
-            "Built brand user creation, persona updates, removals, listing, and audit-query workflows from a product requirements document.",
-            "Implemented super-admin authorization, request validation, duplicate-user handling, multi-persona support, and account-level access control.",
-            "Designed pluggable Admin API adapters with clean service-layer orchestration and local file-backed persistence.",
-            "Added audit logging, OpenAPI documentation, Docker setup, GitHub Actions CI, graceful shutdown, and unit tests.",
+            "Built brand user invitation, self-service onboarding, and 6+ user-management operations.",
+            "Implemented authorization, request validation, duplicate-user handling, and multi-persona support.",
+            "Added audit logging, Docker setup, OpenAPI documentation, CI pipelines, and unit tests.",
         ],
         links: {
             code: "https://github.com/abhaybansal0322/AE-Brand-User-Invitation",
@@ -23,13 +22,12 @@ const projects = [
     {
         title: "DevSquad MCP",
         year: "2026",
-        summary: "TypeScript MCP server that turns vague coding prompts into safe, role-based execution workflows for AI coding agents.",
-        stack: ["TypeScript", "MCP SDK", "Node.js", "Zod", "Vitest", "JSON storage"],
+        summary: "NPM-based MCP server that converts vague coding prompts into structured workflows for Claude Code, Codex, Cursor, and Antigravity.",
+        stack: ["MCP Server", "TypeScript", "Node.js", "npm", "AI Agents"],
         proof: [
-            "Built deterministic prompt classification for implementation, discovery-first, and investigation-only workflows.",
-            "Modeled senior-dev roles across Architect, Backend, Frontend, Database, Testing, Reviewer, Investigation, and DevOps tasks.",
-            "Implemented local JSON workflow state with recovery from invalid data and atomic writes through temporary files.",
-            "Added rule-based review gates, final merge strategy output, verification checklists, and risk summaries without API keys or shell execution.",
+            "Built a prompt classification engine with 3 execution paths.",
+            "Added rule-based review gates for safer AI-assisted changes.",
+            "Covered risky domains including auth, payments, databases, deployments, and secrets.",
         ],
         links: {
             code: "https://github.com/abhaybansal0322/Devsquad",
@@ -39,35 +37,17 @@ const projects = [
     {
         title: "Smart Expense Splitter",
         year: "2026",
-        summary: "Full-stack expense management platform for precise group spending, settlement planning, authentication, and financial workflows.",
-        stack: ["Next.js", "TypeScript", "PostgreSQL", "Neon", "NextAuth", "Docker"],
+        summary: "Full-stack financial workflow platform supporting Equal, Exact, Percentage, and Itemized splits with precise settlement logic.",
+        stack: ["Next.js", "TypeScript", "PostgreSQL", "NextAuth", "Docker"],
         proof: [
-            "Engineered Equal, Exact, Percentage, and Itemized split workflows.",
+            "Engineered 4 split modes: Equal, Exact, Percentage, and Itemized.",
             "Validated penny-accurate settlement behavior across 1000+ generated expense cases.",
             "Implemented a greedy settlement algorithm to minimize transactions in complex groups.",
-            "Used service-based backend architecture with API routes, PostgreSQL, auth, and Dockerized deployment.",
         ],
         links: {
             code: "https://github.com/abhaybansal0322/smart-expense-splitter",
         },
         diagram: ["API routes", "Services", "PostgreSQL", "Settlement engine"],
-    },
-    {
-        title: "ELC (I-Qube) Connect",
-        year: "2025",
-        summary: "Backend-driven room booking and resource workflow system for educational center operations.",
-        stack: ["Next.js", "TypeScript", "MongoDB", "Node.js", "Redis", "AWS EC2"],
-        proof: [
-            "Designed room booking workflows handling 100+ daily requests.",
-            "Built role-based access for Super Admin, Admin, and Faculty users with JWT authentication.",
-            "Optimized backend performance using Redis caching and efficient MongoDB queries.",
-            "Deployed the full-stack application on AWS EC2 with Nginx and PM2.",
-        ],
-        links: {
-            demo: "https://elc-connect-y33t.vercel.app/",
-            code: "https://github.com/aryansharma19992e/ELC-CONNECT",
-        },
-        diagram: ["Faculty", "Booking API", "RBAC", "Redis cache", "MongoDB"],
     },
 ];
 
@@ -79,7 +59,7 @@ const Projects = () => {
                     <div className="max-w-3xl">
                         <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#58d6c9]">Featured projects</p>
                         <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-                            Four systems with backend depth recruiters can inspect.
+                            Three systems with backend depth recruiters can inspect.
                         </h2>
                     </div>
                     <p className="max-w-sm text-sm leading-7 text-slate-400">
@@ -104,17 +84,6 @@ const Projects = () => {
                                         <h3 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">{project.title}</h3>
                                     </div>
                                     <div className="flex gap-2">
-                                        {project.links.demo && (
-                                            <a
-                                                href={project.links.demo}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                aria-label={`${project.title} demo`}
-                                                className="inline-flex h-10 w-10 items-center justify-center border border-white/10 text-slate-300 transition hover:border-white/30 hover:text-white"
-                                            >
-                                                <ArrowUpRight size={18} />
-                                            </a>
-                                        )}
                                         <a
                                             href={project.links.code}
                                             target="_blank"
