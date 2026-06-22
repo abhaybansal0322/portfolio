@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Code2, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Code2, Download, Github, Linkedin, Mail, Trophy } from "lucide-react";
 
 const profileLinks = [
     { label: "GitHub", href: "https://github.com/abhaybansal0322", icon: Github },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/abhay-bansal-44474a263/", icon: Linkedin },
-    { label: "CodeChef", href: "https://www.codechef.com/users/bansal03", icon: Code2 },
+    { label: "CodeChef", href: "https://www.codechef.com/users/bansal03", icon: Trophy },
+    { label: "LeetCode", value: "abhaybansal", href: "https://leetcode.com/u/abhaybansal_/", icon: Code2 },
     { label: "Email", href: "mailto:abhaybansalwork@gmail.com", icon: Mail },
 ];
 
