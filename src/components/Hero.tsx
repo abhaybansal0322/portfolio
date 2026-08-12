@@ -30,7 +30,7 @@ const Hero = () => {
                         transition={{ duration: 0.55 }}
                         className="font-mono text-xs uppercase tracking-[0.32em] text-[#58d6c9]"
                     >
-                        Final-year CSE student at Thapar University
+                        B.E. CSE, Thapar Institute 2026 &middot; CGPA 8.4/10
                     </motion.p>
 
                     <motion.h1
@@ -48,7 +48,7 @@ const Hero = () => {
                         transition={{ duration: 0.65, delay: 0.16 }}
                         className="mt-7 max-w-2xl text-lg leading-8 text-slate-300"
                     >
-                        Software engineer focused on TypeScript/Fastify microservices, Go services, AI integrations, Socket.IO workflows, PostgreSQL, Redis, Docker, and scalable backend design.
+                        Backend-focused software engineer building scalable microservices and AI workflow infrastructure with TypeScript, Node.js, Go, PostgreSQL, Redis, and LangGraph. LeetCode Guardian (2140+, top 1%) and CodeChef 4-Star with 800+ DSA problems solved.
                     </motion.p>
 
                     <motion.div
@@ -118,7 +118,7 @@ const Hero = () => {
                                 ["real time", "Socket.IO workflow execution with JWT auto-refresh, request correlation, connection reuse, timeouts, and throttling for 50 parallel AI executions"],
                                 ["stateful ai", "LangGraph checkpoints, Redis, thread identifiers, and persisted execution IDs across 5+ conversational flows"],
                                 ["go backend", "Brand invitation service with authorization, audit logs, OpenAPI docs, Docker, CI, and unit tests"],
-                                ["coding proof", "LeetCode 2140+, CodeChef 4-Star 1916+, and 800+ DSA problems solved"],
+                                ["coding proof", "LeetCode Guardian 2140+ (top 1%), CodeChef 4-Star 1916+, 800+ DSA problems, multiple global top-200 contest finishes"],
                             ].map(([title, detail], index) => (
                                 <div key={title} className="grid grid-cols-[112px_1fr] gap-4 border-t border-white/10 pt-5 first:border-t-0 first:pt-0">
                                     <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#58d6c9]">0{index + 1} {title}</p>

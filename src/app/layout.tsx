@@ -8,9 +8,9 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Abhay Bansal | Software Developer",
+  title: "Abhay Bansal | Software Engineer",
   description:
-    "Software developer focused on TypeScript/Fastify microservices, Go backend services, AI workflow integrations, Socket.IO, PostgreSQL, Redis, Docker, and strong problem solving.",
+    "Backend-focused software engineer building scalable microservices and AI workflow infrastructure with TypeScript, Node.js, Go, PostgreSQL, Redis, and LangGraph. LeetCode Guardian and CodeChef 4-Star.",
 };
 
 export default function RootLayout({

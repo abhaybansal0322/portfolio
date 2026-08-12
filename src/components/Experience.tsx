@@ -16,12 +16,12 @@ const Experience = () => {
         <section id="experience" className="bg-[#07090d] px-6 py-24 text-white">
             <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.8fr_1.2fr]">
                 <div>
-                    <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#58d6c9]">Current experience</p>
+                    <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#58d6c9]">Experience</p>
                     <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
                         AI workflow integrations inside production microservices.
                     </h2>
                     <p className="mt-6 max-w-xl text-sm leading-7 text-slate-400">
-                        Current engineering internship work is centered on TypeScript backend integrations, real-time AI workflow execution, persisted conversational state, and recruiter-assist systems.
+                        Five months of engineering internship work centered on TypeScript backend integrations, real-time AI workflow execution, persisted conversational state, and recruiter-assist systems.
                     </p>
                 </div>
 
@@ -41,7 +41,7 @@ const Experience = () => {
                             <p className="mt-3 text-lg text-slate-300">Adaptware Solutions Pvt Ltd.</p>
                         </div>
                         <div className="font-mono text-sm text-slate-400 md:text-right">
-                            <p>Mar 2026 - Present</p>
+                            <p>Mar 2026 - Jul 2026</p>
                             <p>Chandigarh, India</p>
                         </div>
                     </div>

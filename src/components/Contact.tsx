@@ -25,11 +25,11 @@ const Contact = () => {
                 <div>
                     <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#58d6c9]">Recruiter contact</p>
                     <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-                        Open to software developer roles and internship-to-full-time conversations.
+                        Open to full-time backend and software engineering roles.
                     </h2>
                     <p className="mt-6 flex items-center gap-3 text-sm text-slate-400">
                         <MapPin className="h-4 w-4 text-[#58d6c9]" />
-                        Patiala, Punjab, India
+                        Chandigarh, India
                     </p>
                     <a
                         href="/Abhay-Bansal-Resume.pdf"

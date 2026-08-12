@@ -4,13 +4,10 @@ import { motion } from "framer-motion";
 import { Trophy } from "lucide-react";
 
 const achievements = [
-    "LeetCode Contest Rating 2140+ and CodeChef 4-Star Rating 1916+; solved 800+ DSA problems.",
+    "LeetCode Guardian with a 2140+ contest rating (top 1% globally) and CodeChef 4-Star at 1916+; 800+ DSA problems solved.",
     "Global Rank 136 and 176 in LeetCode Weekly Contests, top 1% among 30,000+ participants.",
     "Global Rank 25 in CodeChef Starters 216 Division 2 among 20,000+ participants.",
-    "INR 3 Lakh Merit Scholarship by Thapar University.",
-    "Algorithms and Data Structures Certification by Coding Ninjas.",
-    "AWS Academy Cloud Foundations.",
-    "AWS Academy Cloud Developing.",
+    "INR 3 Lakh Merit Scholarship by Thapar University for academic excellence.",
 ];
 
 const Achievements = () => {
@@ -21,7 +18,7 @@ const Achievements = () => {
                     <div>
                         <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#58d6c9]">Competitive proof</p>
                         <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
-                            Achievements and certifications from the resume.
+                            Contest results that back the engineering work.
                         </h2>
                     </div>
                 </div>

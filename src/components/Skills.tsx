@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, Cloud, Code2, Server } from "lucide-react";
+import { Cloud, Code2, Database, Server } from "lucide-react";
 
 const skillGroups = [
     {
@@ -10,23 +10,23 @@ const skillGroups = [
         items: ["C++", "Go", "TypeScript", "JavaScript", "SQL"],
     },
     {
-        title: "Backend & Frameworks",
+        title: "Backend & Realtime",
         icon: Server,
-        items: ["Node.js", "Fastify", "Go HTTP Services", "REST APIs", "React", "Next.js"],
+        items: ["Node.js", "Fastify", "REST APIs", "Socket.IO / WebSockets", "JWT Authentication", "OpenAPI", "LangGraph"],
     },
     {
-        title: "AI & Realtime",
-        icon: Bot,
-        items: ["LangChain", "LangGraph", "Socket.IO", "AI Agents", "JWT refresh", "Concurrency throttling"],
+        title: "Frontend & Databases",
+        icon: Database,
+        items: ["React", "Next.js", "PostgreSQL", "Redis"],
     },
     {
-        title: "Data & Platforms",
+        title: "DevOps, Tools & Testing",
         icon: Cloud,
-        items: ["PostgreSQL", "MongoDB", "Redis", "Docker", "GitHub Actions", "AWS EC2", "AWS S3", "Git"],
+        items: ["Docker", "GitHub Actions (CI/CD)", "AWS EC2", "AWS S3", "Git", "Linux", "Postman", "Unit Testing", "Integration Testing", "Go testing"],
     },
 ];
 
-const foundations = ["DSA", "OS", "DBMS", "Computer Networks", "OOP", "Next.js", "Tailwind CSS", "OpenAPI"];
+const foundations = ["Data Structures and Algorithms", "Operating Systems", "DBMS", "Computer Networks", "OOP"];
 
 const Skills = () => {
     return (
