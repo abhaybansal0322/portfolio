@@ -8,7 +8,7 @@ const contactLinks = [
     { label: "Phone", value: "+91 8968916714", href: "tel:+918968916714", icon: Phone },
     { label: "LinkedIn", value: "abhay-bansal", href: "https://www.linkedin.com/in/abhay-bansal-44474a263/", icon: Linkedin },
     { label: "GitHub", value: "abhaybansal0322", href: "https://github.com/abhaybansal0322", icon: Github },
-    { label: "LeetCode", value: "abhaybansal", href: "https://leetcode.com/u/abhaybansal_/", icon: Code2 },
+    { label: "LeetCode", value: "abhaybansal_", href: "https://leetcode.com/u/abhaybansal_/", icon: Code2 },
     { label: "CodeChef", value: "bansal03", href: "https://www.codechef.com/users/bansal03", icon: Trophy },
 ];
 
@@ -27,10 +27,15 @@ const Contact = () => {
                     <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
                         Open to full-time backend and software engineering roles.
                     </h2>
-                    <p className="mt-6 flex items-center gap-3 text-sm text-slate-400">
-                        <MapPin className="h-4 w-4 text-[#58d6c9]" />
-                        Chandigarh, India
-                    </p>
+                    <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-400">
+                        <span className="flex items-center gap-3">
+                            <MapPin className="h-4 w-4 text-[#58d6c9]" />
+                            Chandigarh, India
+                        </span>
+                        <span className="border border-[#58d6c9]/40 px-3 py-1 font-mono text-xs uppercase tracking-[0.18em] text-[#58d6c9]">
+                            Immediate Joiner
+                        </span>
+                    </div>
                     <a
                         href="/Abhay-Bansal-Resume.pdf"
                         target="_blank"

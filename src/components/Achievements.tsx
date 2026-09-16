@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Trophy } from "lucide-react";
 
 const achievements = [
-    "LeetCode Guardian with a 2140+ contest rating (top 1% globally) and CodeChef 4-Star at 1916+; 800+ DSA problems solved.",
+    "LeetCode Guardian with a 2200+ contest rating (top 1% globally) and CodeChef 4-Star at 1916+; 800+ DSA problems solved.",
     "Global Rank 136 and 176 in LeetCode Weekly Contests, top 1% among 30,000+ participants.",
     "Global Rank 25 in CodeChef Starters 216 Division 2 among 20,000+ participants.",
     "INR 3 Lakh Merit Scholarship by Thapar University for academic excellence.",

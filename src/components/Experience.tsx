@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 import { Workflow } from "lucide-react";
 
 const highlights = [
-    "Contributed to a monorepo-based microservices platform spanning 2 independently deployable Fastify services, separate PostgreSQL schemas, Redis-backed workers, React applications, and shared npm packages.",
-    "Engineered a centralized TypeScript integration layer between the product backend and Orion AI service, enabling 20+ AI workflows across 12+ modules including resume processing, job creation, candidate screening, assessments, and interviews.",
-    "Built Socket.IO-based workflow communication with JWT auto-refresh, request correlation, connection reuse, timeout handling, and concurrency throttling, supporting up to 50 parallel AI executions per backend instance.",
-    "Implemented multi-turn workflow execution using LangGraph checkpoints, Redis, thread identifiers, and persisted execution IDs across 5+ conversational flows such as job intake, resume building, and application screening.",
-    "Integrated recruiter-assist workflows that performed sentiment analysis every 30 seconds and live interview analysis every 2 minutes, persisted insights to PostgreSQL, and streamed results to interviewers through Socket.IO.",
+    "Developed recruiting and AI-workflow features in a monorepo of 2 independently deployable Fastify microservices, with separate PostgreSQL schemas, Redis-backed workers, and shared npm packages.",
+    "Engineered a TypeScript integration layer to the Orion AI service, enabling 20+ AI workflows across 12+ modules including resume processing, job creation, candidate screening, assessments, and interviews.",
+    "Built Socket.IO workflow execution with concurrency throttling, supporting up to 50 parallel AI runs per backend instance.",
+    "Added JWT auto-refresh, request correlation, connection reuse, and timeouts, keeping AI socket sessions authenticated across long-running executions.",
+    "Implemented multi-turn workflows with LangGraph checkpoints and Redis, preserving state across 5+ conversational flows such as job intake, resume building, and application screening.",
+    "Integrated sentiment analysis into live interviews every 30 seconds, streaming results to interviewers via Socket.IO.",
+    "Integrated recruiter-assist live interview analysis every 2 minutes, persisting insights to PostgreSQL.",
 ];
 
 const Experience = () => {

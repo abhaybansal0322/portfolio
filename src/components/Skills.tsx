@@ -12,7 +12,7 @@ const skillGroups = [
     {
         title: "Backend & Realtime",
         icon: Server,
-        items: ["Node.js", "Fastify", "REST APIs", "Socket.IO / WebSockets", "JWT Authentication", "OpenAPI", "LangGraph"],
+        items: ["Node.js", "Fastify", "REST APIs", "Microservices", "Socket.IO / WebSockets", "JWT Authentication", "OpenAPI", "LangGraph"],
     },
     {
         title: "Frontend & Databases",

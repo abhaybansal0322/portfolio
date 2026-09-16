@@ -7,7 +7,7 @@ const profileLinks = [
     { label: "GitHub", href: "https://github.com/abhaybansal0322", icon: Github },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/abhay-bansal-44474a263/", icon: Linkedin },
     { label: "CodeChef", href: "https://www.codechef.com/users/bansal03", icon: Trophy },
-    { label: "LeetCode", value: "abhaybansal", href: "https://leetcode.com/u/abhaybansal_/", icon: Code2 },
+    { label: "LeetCode", href: "https://leetcode.com/u/abhaybansal_/", icon: Code2 },
     { label: "Email", href: "mailto:abhaybansalwork@gmail.com", icon: Mail },
 ];
 
@@ -48,7 +48,7 @@ const Hero = () => {
                         transition={{ duration: 0.65, delay: 0.16 }}
                         className="mt-7 max-w-2xl text-lg leading-8 text-slate-300"
                     >
-                        Backend-focused software engineer building scalable microservices and AI workflow infrastructure with TypeScript, Node.js, Go, PostgreSQL, Redis, and LangGraph. LeetCode Guardian (2140+, top 1%) and CodeChef 4-Star with 800+ DSA problems solved.
+                        Backend-focused software engineer who built AI workflow infrastructure across Fastify microservices at Adaptware using TypeScript, Node.js, PostgreSQL, Redis, Socket.IO, and LangGraph, plus Go REST services and full-stack Next.js apps. LeetCode Guardian (2200+, top 1% globally) and CodeChef 4-Star (1916+) with 800+ DSA problems solved.
                     </motion.p>
 
                     <motion.div
@@ -118,7 +118,7 @@ const Hero = () => {
                                 ["real time", "Socket.IO workflow execution with JWT auto-refresh, request correlation, connection reuse, timeouts, and throttling for 50 parallel AI executions"],
                                 ["stateful ai", "LangGraph checkpoints, Redis, thread identifiers, and persisted execution IDs across 5+ conversational flows"],
                                 ["go backend", "Brand invitation service with authorization, audit logs, OpenAPI docs, Docker, CI, and unit tests"],
-                                ["coding proof", "LeetCode Guardian 2140+ (top 1%), CodeChef 4-Star 1916+, 800+ DSA problems, multiple global top-200 contest finishes"],
+                                ["coding proof", "LeetCode Guardian 2200+ (top 1% globally), CodeChef 4-Star 1916+, 800+ DSA problems, multiple global top-200 contest finishes"],
                             ].map(([title, detail], index) => (
                                 <div key={title} className="grid grid-cols-[112px_1fr] gap-4 border-t border-white/10 pt-5 first:border-t-0 first:pt-0">
                                     <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#58d6c9]">0{index + 1} {title}</p>
