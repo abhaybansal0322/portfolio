@@ -8,6 +8,7 @@ const navLinks = [
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
+    { name: "Achievements", href: "#achievements" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -21,7 +22,7 @@ const Navbar = () => {
                     Abhay Bansal
                 </Link>
 
-                <div className="hidden items-center gap-7 md:flex">
+                <div className="hidden items-center gap-7 lg:flex">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -47,7 +48,7 @@ const Navbar = () => {
 
                 <button
                     type="button"
-                    className="inline-flex h-10 w-10 items-center justify-center border border-white/10 text-white md:hidden"
+                    className="inline-flex h-10 w-10 items-center justify-center border border-white/10 text-white lg:hidden"
                     onClick={() => setIsOpen((open) => !open)}
                     aria-label="Toggle navigation"
                     aria-expanded={isOpen}
@@ -57,7 +58,7 @@ const Navbar = () => {
             </div>
 
             {isOpen && (
-                <div className="border-t border-white/10 bg-[#07090d] px-6 py-5 md:hidden">
+                <div className="border-t border-white/10 bg-[#07090d] px-6 py-5 lg:hidden">
                     <div className="mx-auto flex max-w-7xl flex-col gap-4">
                         {navLinks.map((link) => (
                             <Link
